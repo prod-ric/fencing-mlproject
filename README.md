@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 ### 1. Extract Poses from Videos
 
-Organize your fencing videos by action type:
+Organize your fencing videos by action type (there are already some default ones loaded):
 
 ```
 src/data/videoes/
@@ -306,21 +306,6 @@ LSTM has more parameters (~520K) but can capture longer-range dependencies.
 
 ---
 
-## 📈 Performance & Limitations
-
-### What Works Well
-
-✅ **Dynamic actions** (advance, retreat, lunge) - High accuracy across different speeds  
-✅ **Real-time processing** - Smooth 30 FPS on CPU  
-✅ **Clear, isolated actions** - Excellent recognition when actions are distinct  
-✅ **Temporal coherence** - Stable predictions within action sequences  
-
-### Known Limitations
-
-⚠️ **Style variation** - Trained on single fencer; different guard positions can confuse the model  
-⚠️ **Wide guards** - Fencers with wide idle stances sometimes misclassified as lunges  
-⚠️ **Transition moments** - Between-action frames have ambiguous predictions  
-⚠️ **Partial actions** - Starting/stopping mid-action reduces accuracy  
 
 ### Improving Generalization
 
@@ -379,17 +364,8 @@ This system demonstrates capabilities relevant to sports analytics platforms:
 
 **For Veo specifically:** The edge-deployable model (~0.25MB) can run on camera hardware, enabling real-time on-device analysis without cloud dependencies.
 
----
 
-## 📝 Citation & Contact
 
-**Project Type:** Portfolio/Job Application Demo  
-**Created:** December 2025  
-**Purpose:** Demonstrate ML engineering skills for sports video analysis
-
-For detailed technical discussion, see [MEDIUM_ARTICLE.md](MEDIUM_ARTICLE.md)
-
-**Built for:** Veo - AI Sports Camera Company
 
 ---
 
@@ -399,28 +375,4 @@ MIT License - Free to use for educational and portfolio purposes.
 
 ---
 
-## 🐛 Troubleshooting
 
-### "No poses detected in video"
-- Check video quality and lighting
-- Ensure full body visible in frame
-- Try lowering `--confidence` threshold (default 0.5)
-
-### "Model overfitting / poor validation accuracy"
-- Need more diverse training data (different fencers)
-- Reduce model capacity or increase dropout
-- Add data augmentation
-
-### "Slow inference speed"
-- Reduce sequence length (30 instead of 60 frames)
-- Skip pose detection on some frames
-- Use GPU if available (currently CPU-only)
-
-### "Wide guard misclassified as lunge"
-- This is a known limitation due to single-fencer training data
-- Solution: Train on multiple fencers with various guard widths
-- Or: Add guard-width normalization in feature extraction
-
----
-
-**Happy Fencing! 🤺**

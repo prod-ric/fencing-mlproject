@@ -1,0 +1,74 @@
+# .gitignore for Fencing Action Recognition Project
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyTorch
+*.pt
+*.pth
+*.ckpt
+
+# Data (uncomment if you want to ignore data files)
+# data/raw/*.npy
+# data/processed/*.npy
+# data/raw/*.csv
+# data/processed/*.csv
+
+# Models (uncomment if models are too large for git)
+# models/*.pt
+# models/*.pth
+
+# Results
+results/
+*.png
+*.jpg
+*.pdf
+
+# Logs
+logs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+MEDIUM_ARTICLE.md
+own/
+own
